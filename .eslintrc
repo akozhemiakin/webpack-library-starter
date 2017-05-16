@@ -8,8 +8,11 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
+
+  "extends": ["plugin:jest/recommended"],
 
   "globals": {
     "document": false,
@@ -27,7 +30,7 @@
   "parser": "babel-eslint",
 
   "plugins": [
-    
+    "jest"
   ],
 
   "rules": {
@@ -157,7 +160,7 @@
     "no-with": 2,
     "one-var": 0,
     "operator-assignment": 0,
-    "operator-linebreak": [2, "after"],
+    "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
     "padded-blocks": 0,
     "quote-props": 0,
     "quotes": [2, "single", "avoid-escape"],
