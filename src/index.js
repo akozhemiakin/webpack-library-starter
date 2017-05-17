@@ -1,8 +1,10 @@
+// @flow
+
+// Getter is removed until https://github.com/facebook/flow/issues/2826 is fixed
 export default class Library {
+  name: string;
+
   constructor() {
-    this._name = 'Library';
-  }
-  get name() {
-    return this._name;
+    this.name = 'Library';
   }
 }
